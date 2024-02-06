@@ -1,0 +1,409 @@
+\documentclass[conference]{IEEEtran}
+\IEEEoverridecommandlockouts
+\usepackage{cite}
+\usepackage{amsmath,amssymb,amsfonts}
+\usepackage{algorithmic}
+\usepackage{graphicx}
+\usepackage{textcomp}
+\usepackage{xcolor}
+\usepackage{wrapfig}
+\usepackage{titlesec}
+\usepackage{tocloft}
+
+\usepackage{titletoc} 
+
+
+% Configuración de espaciado
+\setlength{\parskip}{1pt}
+\setlength{\parindent}{1em}
+
+% Configuración de titlesec
+
+\titlespacing{\subsubsection}{1pt}{\parskip}{-\parskip}
+\titleformat{\subsubsection}[block]{\normalfont\fontsize{12}{14}\selectfont\bfseries}{}{1em}{}
+
+
+\def\BibTeX{{\rm B\kern-.05em{\sc i\kern-.025em b}\kern-.08em
+    T\kern-.1667em\lower.7ex\hbox{E}\kern-.125emX}}
+    
+\renewcommand{\cftdotsep}{\cftnodots}
+\renewcommand{\cftdot}{.}
+
+\titlecontents{section}
+  [1.5em] % Ajusta el espacio izquierdo según tus preferencias
+  {\vspace{0.5em}}
+  {\contentslabel{1.5em}}
+  {\hspace*{-1.5em}}
+  {\titlerule*[0.5pc]{.}\contentspage}
+
+\titlecontents{subsection}
+  [1.8em] % Ajusta el espacio izquierdo según tus preferencias
+  {\vspace{0.1em}}
+  {\contentslabel{3.8em}}
+  {\hspace*{-1.7em}}
+  {\titlerule*[0.5pc]{.}\contentspage}
+
+\begin{document}
+
+\begin{flushleft}
+    \rule{16cm}{5pt}\vskip1cm
+    \begin{bfseries}
+        \Huge{SOFTWARE REQUIREMENTS SPECIFICATION}\\
+        
+        \vspace{1cm}
+        \begin{wrapfigure}{r}{0.25\textwidth}
+            \vspace{-0.8cm} % Ajusta según sea necesario
+            \includegraphics[width=\linewidth]{logoculero.png}
+        \end{wrapfigure}
+
+        \vspace{1cm}
+        for\\
+        \vspace{1cm}
+        J.K.A Transports\\
+        \vspace{1cm}
+        \LARGE{Version Yes\myversion}\\ % Si se quita esta linea la portada se muere, nose por que(favor de no quitar).
+        \vspace{1cm}
+        Conducted by : \\
+        1. Flores Huerta José Enrique\\
+        2. García Lara America Denisse\\
+        3. Lazcano Aguilar Gerardo\\
+        4. Mendoza Gómez Kevin Antonio\\
+        5. Rojero Flores Axel Yahir\\
+        6. Vidaña Aguirre Jordan\\
+        
+        \vspace{1cm}
+        Presented to : Parra Galaviz Ray Brunett\\
+        \vspace{1cm}
+        \today\\
+    \end{bfseries}
+\end{flushleft}
+
+% Page break here
+\newpage
+
+
+\clearpage
+
+\tableofcontents
+
+\clearpage
+
+\section{\fontsize{17}{20}\selectfont Introduction\\}
+  
+\subsection{\fontsize{16}{19}\selectfont   Target Audience\\}
+        This SRS is intended for developers, users, and evaluators. Additionally, the document will provide all internal, external, functional, and non-functional information about the application, "J.K.A Transports."\\
+
+  
+\subsection{\fontsize{16}{19}\selectfont Project Scope\\}
+        The "J.K.A Transports" application creates a space designed for employees, drivers, and office personnel to facilitate the visualization of routes, stops, truck numbers, and the assigned driver for employee transportation. After registering in the system, the employee is identified by their employee number, which they must enter from the login page. They are added as program employees after completing the account creation process. The employee profile will contain all personal information and details of past trips. The main tasks of office staff include creating, modifying, assigning, or deleting routes, creating driver profiles, and approving the stop list for each route. They can also change the assignment of a driver from one truck to another and post notices directly in the application for both employees and drivers. Driver assignments may be subject to changes by office personnel.\\
+
+\section{\fontsize{16}{19}\selectfont Product Perspective \\}
+\subsection{\fontsize{16}{19}\selectfont    Product Perspective}
+        "J.K.A Transports" replaces the traditional printed route assignment process. This application will store user names, routes, and other relevant information in a database. The primary goal of this project is to maximize productivity and simplify the visualization and management of transportation routes.\\
+
+ 
+\subsection{\fontsize{16}{19}\selectfont  User Classes and Characteristics\\}
+        "J.K.A Transports" will have three main user types:
+        - Office Staff
+        - Drivers
+        - Employees
+        Office staff defines the routes for drivers, while employees use the system to visualize the required route.
+
+  
+\subsection{\fontsize{16}{19}\selectfont Product Features\\}
+        "J.K.A Transports" stores all data related to employees who have traveled each route. Additional routes or stops can be included if necessary.\\
+
+   
+\subsection{\fontsize{16}{19}\selectfont Operating Environment\\}
+        This application should operate on the Android operating system.
+
+\section{\fontsize{16}{19}\selectfont System Features\\}
+   \subsection{\fontsize{16}{19}\selectfont 3.1. Functional Requirements\\}
+        The requirements are ordered from highest to lowest:
+
+- \textbf{Login and Authentication}: The system must allow employees to log in securely. There must be different user roles with specific permissions, such as administrators and regular employees.
+
+- \textbf{Logout}: The system might allow users to logout securely.
+
+- \textbf{Route Creation and Editing}: The system should allow administrators to create new routes and edit existing routes.
+
+- \textbf{Assignment of additional vehicles}: When the maximum capacity of a vehicle is reached, the application will automatically assign an additional vehicle.
+
+- \textbf{Timetable visualization}: Users will be able to view transportation schedules in real time.
+
+- \textbf{Route assignments}: Supervisors or managers should be able to assign specific routes and tasks to staff members.
+
+- \textbf{Route Visualization}: Staff members should be able to view assigned routes through a graphical interface or detailed list.
+
+- \textbf{Route tracking}: Users will be able to follow the transport route in real time.
+
+- \textbf{Seat reservation}: Users will have the option to reserve a seat on the transport.\\
+
+   
+\subsection{\fontsize{16}{19}\selectfont Software Requirements\\}
+        \begin{itemize}
+            \item Java.
+            \item Boostrap.
+            \item Android.
+            \item JavaScript.
+            \item PHP
+        \end{itemize}
+
+        
+\clearpage
+
+\section{\fontsize{16}{19}\selectfont Other Non-Functional Requirements\\}
+
+   
+\subsection{\fontsize{16}{19}\selectfont Performance Requirements\\}
+        - Load Time: The application must load in less than 3 seconds to provide a fast user experience.
+        - Response Time: Core functions such as route search or information updates should respond in less than 1 second.
+        - Memory Consumption: The application should not consume more than 100 MB of RAM for efficient performance, especially on older devices.
+        - Battery Consumption: Minimize battery consumption to ensure the application does not quickly deplete the device's battery.
+        - OS Version Compatibility: Ensure the application is compatible with the most widely used versions of Android and iOS to reach a broader audience.
+        - Network Connection Handling: The application must handle intermittent network connections and provide clear feedback to the user in case of connection loss.\\
+
+   
+\subsection{\fontsize{16}{19}\selectfont Security Requirements\\}
+        - Secure Authentication: Implement a robust authentication system to ensure only authorized users have access to the application.
+        - Secure Data Storage: Ensure sensitive information, such as route data and customer details, is securely stored using encryption.
+        - Access Control: Establish appropriate roles and permissions for users, ensuring each user has access only to functions and data relevant to their role.\\
+
+   
+\subsection{\fontsize{16}{19}\selectfont Software Quality Attributes\\}
+        - Usability:
+            - The user interface should be intuitive and easy to use for users of different skill levels.
+            - Ensure accessibility for people with disabilities, complying with standards such as WCAG.
+        - Reliability:
+            - The application should be robust and resilient to failures, handling errors gracefully without affecting the user experience.
+            - Implement backup and recovery mechanisms in case of unexpected failures.
+        - Maintainability:
+            - Write clean and modular code to facilitate future updates and improvements.
+            - Provide detailed documentation to help other developers understand and maintain the code.
+        - Performance:
+            - Optimize the application's performance to ensure fast and efficient response times.
+            - Conduct load testing to verify performance under different conditions.
+        - Portability:
+            - Ensure the application is compatible with various mobile devices and operating system versions.
+            - Facilitate code portability for future expansions to other platforms.
+        - Efficiency:
+            - Use resources efficiently, minimizing power consumption and network load.
+            - Optimize algorithms and processes to enhance execution speed.
+        - Scalability:
+            - Design the application to handle a gradual increase in the number of users and data.
+            - Implement scalable architectures to accommodate future growth.\\
+
+\section{\fontsize{16}{19}\selectfont Project Summary.\\}
+
+The project focuses on the creation of an innovative transportation application. This application will allow users to visualize schedules and routes in real time, thus improving their personal planning. In addition, it will address the problem of lack of seats in a truck by allowing reservations to be made through the application. If maximum capacity is reached, an additional vehicle will be assigned for that route. For this, we plan to overcome logistical challenges and improve the mobility experience, resulting in the creation of a comprehensive tool that simplifies staff travel management and optimizes route planning and resource allocation.\\
+
+
+
+\section{\fontsize{16}{19}\selectfont Functionalities.\\}
+% Resto del documento
+
+The project focuses on the creation of an innovative transportation application. This application will allow users to visualize schedules and routes in real time, thus improving their personal planning. In addition, it will address the problem of lack of seats in a truck by allowing reservations to be made through the application. If maximum capacity is reached, an additional vehicle will be assigned for that route. For this, we plan to overcome logistical challenges and improve the mobility experience, resulting in the creation of a comprehensive tool that simplifies staff travel management and optimizes route planning and resource allocation. \\
+
+
+
+
+\section{\fontsize{16}{19}\selectfont Services to be incorporated.\\}
+
+The services to be incorporated into the project are listed below:
+
+- \textbf{GPS system}: This service will be used to provide real-time arrival time estimates for transportation. This will allow users to better plan their time and reduce uncertainty about when their transportation will arrive.
+
+- \textbf{Google Maps Apart}: This service will allow users to see the exact location of their transportation in real time. In addition, it can also help users explore and familiarize themselves with transportation routes. 
+
+- \textbf{Support via WhatsApp: }This service will help users to easily communicate any doubts or problems they may have, ensuring better customer service for any problems that may arise in order to provide them with adequate service. 
+
+\clearpage
+
+\onecolumn
+\section{\fontsize{17}{20}\selectfont Diagrams}
+
+{\fontsize{12}{15}\selectfont
+
+- \textbf{DER:}
+
+\begin{figure}[h]
+    \centering
+    \includegraphics[width=0.9\linewidth]{der.png}
+    \caption{DER}
+    \label{fig:der-placeholder}
+\end{figure}
+
+\newpage
+
+- \textbf{MR: \\}
+}
+
+\begin{figure}[h]
+    \centering
+    \includegraphics[width=0.9\linewidth]{MER.png}
+    \caption{MR}
+    \label{fig:mer-placeholder}
+\end{figure}
+
+\vspace{0.2 cm }
+\newpage
+\subsection{\fontsize{16}{20}\selectfont UML:\\}
+
+{\fontsize{19}{15}\selectfont
+
+- \textbf{Case Use:}
+
+\vspace{-0.5 cm }
+
+\begin{figure}[h]
+    \centering
+    \includegraphics[width=0.5\linewidth]{case.png}
+    \caption{Use Case Placeholder Image}
+    \label{fig:use-case-placeholder}
+\end{figure}
+
+\begin{figure}[h]
+    \centering
+    \includegraphics[width=0.8\linewidth]{use.png}
+    \caption{Use Case Placeholder Image}
+    \label{fig:use-case-placeholder}
+\end{figure}
+
+\clearpage
+- \textbf{Sequence:\\}
+
+\begin{figure}[h]
+    \centering
+    \includegraphics[width=0.9\linewidth]{secuenci.png}
+    \caption{Sequence Placeholder Image}
+    \label{fig:sequence-placeholder}
+\end{figure}
+\vspace{0.5 cm}
+\newpage
+- \textbf{Class:}
+
+\begin{figure}[h]
+    \centering
+    \includegraphics[width=0.9\linewidth]{clase.png}
+    \caption{Class Placeholder Image}
+    \label{fig:class-placeholder}
+\end{figure}
+
+\newpage
+- \textbf{Relational model:\\}
+
+\begin{figure}[h]
+    \centering
+    \includegraphics[width=0.9\linewidth]{relacional.png}
+    \caption{Class Placeholder Image}
+    \label{fig:class-placeholder}
+\end{figure}
+\vspace{3 cm}
+
+
+
+
+- \textbf{Deployment:}
+
+\vspace{-0.5 cm}
+
+\begin{figure}[h]
+    \centering
+    \includegraphics[width=0.8\linewidth]{despliegue.png}
+    \caption{Deployment Diagram}
+    \label{fig:class-placeholder}
+\end{figure}
+
+\vspace{2 cm}
+\newpage
+- \textbf{Objects:}
+}
+
+\vspace{0.6 cm}
+
+\begin{figure}[h]
+    \centering
+    \includegraphics[width=0.9\linewidth]{objects.png}
+    \caption{Object Diagram}
+    \label{fig:class-placeholder}
+\end{figure}
+\clearpage
+
+
+
+
+
+
+
+
+
+\section{\fontsize{16}{19}\selectfont Layout\\}
+
+\begin{figure} [h]
+    \centering
+    \includegraphics[width=0.5\linewidth]{enma1.png}
+    
+    \label{fig:enter-label}
+\end{figure}
+
+
+
+\begin{figure}[h]
+    \centering
+    \includegraphics[width=0.5\linewidth]{enma2.png}
+    
+    \label{fig:enter-label}
+\end{figure}
+
+\begin{figure}[h]
+    \centering
+    \includegraphics[width=0.5\linewidth]{enma3.png}
+    
+    \label{fig:enter-label}
+\end{figure}
+
+\begin{figure}[h]
+    \centering
+    \includegraphics[width=0.5\linewidth]{enma4.png}
+    
+    \label{fig:enter-label}
+\end{figure}
+
+
+\begin{figure}[h]
+    \centering
+    \includegraphics[width=0.5\linewidth]{image.png}
+    
+    \label{fig:enter-label}
+\end{figure}
+
+
+\begin{figure}[h]
+    \centering
+    \includegraphics[width=0.5\linewidth]{enma5.png}
+    
+    \label{fig:enter-label}
+\end{figure}
+
+\begin{figure}[h]
+    \centering
+    \includegraphics[width=0.5\linewidth]{enma6.png}
+    
+    \label{fig:enter-label}
+\end{figure}
+
+\begin{figure}[h]
+    \centering
+    \includegraphics[width=0.5\linewidth]{enma8.png}
+    
+    \label{fig:enter-label}
+\end{figure}
+
+\begin{figure}[h]
+    \centering
+    \includegraphics[width=0.5\linewidth]{enma7.png}
+    
+    \label{fig:enter-label}
+\end{figure}
+
+\end{document}
